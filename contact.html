@@ -4,7 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>REGISTRATION FORM</title>
-    <link rel="stylesheet" href="contact.css">
+    <style>
+/* General page styling */
+body{
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(-45deg, #ff0080, #ff8c00, #ff0080, #ff8c00);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;    
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding:  15px;
+}
+
+@keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+            
+/* Form container */
+.form-container{
+    background: white;
+    padding: 25px 30px;
+    color: #001c49;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    width: 100%;
+    max-width: 480px;
+    /*look good on desketop, scales on mobile*/
+    margin: auto;
+}
+/* Title */
+.form-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #070606;
+}
+
+/*Labels */
+form label{
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #444; 
+}
+
+/* Input fields */
+form input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    border: 1px solid #007bff;
+}
+
+/* Button */
+form button{
+    width: 100%;
+    margin-top: 24px;
+    padding: 12px 14px;
+    align-items: center;
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover{
+    background: #0056b3;
+}
+
+/* Make textarea behave like inputs if present */
+form textarea{
+    width: 100%;
+    min-height: 110px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+/* Accessible focus styles */
+form input:focus, form textarea:focus, form button:focus{
+    box-shadow: 0 0 0 4px rgba(0,123,255,0.12);
+    border-color: #007bff;
+}
+
+/* Footer text centered */
+.footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive rules - top-level media queries */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+        height: auto; /* allow page to scroll if long */
+    }
+    .form-container {
+        padding: 16px;
+        box-shadow: none;
+        border-radius: 8px;
+        max-width: 100%;
+        margin: 6px 0;
+    }
+    form input, form textarea, form button {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .form-container{
+        max-width: 640px;
+        padding: 22px;
+    }
+    .form-container h1 { font-size: 1.4rem; }
+}
+
+@media (min-width: 1025px) {
+    .form-container {
+        max-width: 720px;
+        padding: 32px;
+    }
+    .form-container h1 { font-size: 1.6rem; }
+}
+    </style>
     <script src="contact.js"></script>
 </head>
 <body>
