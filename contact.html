@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>REGISTRATION FORM</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>REGISTRATION FORM</h1>
+    <form id="registrationForm" method="post">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="school">School Name</label>
+            <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+
+            <label for="eventCode">Event-code</label>
+            <input type="number" id="eventCode" name="eventCode" placeholder="Enter event-code" required>
+
+                <button type="submit">SUBMIT</button>
+         </form>
+            <!-- Hidden iframe used as the form target so the browser submits without CORS issues -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+         <p id="confirmationMessage"
+         style="display:none; color:green;
+         margin-top: 15px; text-align:center;">
+         Thank you for registering! We've received your details.
+        </p>
+    </div>
+
+    <div class="footer-text">Empowering Educators' - IEE</div>
+    <div class="footer-text">All Rights Reserverd. © 2025</div>
+</body>
+</html>
+
