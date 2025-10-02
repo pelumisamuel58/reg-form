@@ -199,18 +199,30 @@ form input:focus, form textarea:focus, form button:focus{
     </section>
     <div class="form-container">
         <h1>REGISTRATION FORM</h1>
-    <form id="registrationForm" method="post">
+    <!--
+        To submit directly into a Google Form without redirecting, set the form's
+        data-google-action attribute to the Google Form's "formResponse" endpoint
+        and set each input's name to the corresponding entry.<id> value from the
+        Google Form (e.g. entry.123456789).
+
+        Example:
+        <form id="registrationForm" method="post" data-google-action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse" data-redirect="https://docs.google.com/forms/d/e/1FAIpQLSfQTsnMSr9PpXUp0dGMPPne_L1A4vW9WIMz3J2NklDuWNA_-g/viewform?usp=dialog" onsubmit="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSfQTsnMSr9PpXUp0dGMPPne_L1A4vW9WIMz3J2NklDuWNA_-g/viewform?usp=dialog'; return false;">
+            <input name="entry.1424405150" ...>
+        </form>
+    -->
+    <!-- Replace the placeholder entry.* names below with your real Google Form entry IDs -->
+    <form id="registrationForm" method="post" data-google-action="https://docs.google.com/forms/d/e/1FAIpQLSfQTsnMSr9PpXUp0dGMPPne_L1A4vW9WIMz3J2NklDuWNA_-g/formResponse">
             <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required>
+        <input type="text" id="fullName" name="entry.1586214618" placeholder="Enter your name" required>
 
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <input type="email" id="email" name="entry.1145902211" placeholder="Enter your email" required>
 
             <label for="school">School Name</label>
-            <input type="text" id="school" name="school" placeholder="Enter your school name" required>
+        <input type="text" id="school" name="entry.1439382958" placeholder="Enter your school name" required>
 
             <label for="eventCode">Event-code</label>
-            <input type="number" id="eventCode" name="eventCode" placeholder="Enter event-code" required>
+        <input type="number" id="eventCode" name="entry.72511170" placeholder="Enter event-code" required>
 
                 <button type="submit">SUBMIT</button>
          </form>
